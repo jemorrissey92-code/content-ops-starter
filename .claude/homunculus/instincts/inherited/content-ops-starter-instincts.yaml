@@ -1,0 +1,570 @@
+# Instincts generated from https://github.com/jemorrissey92-code/content-ops-starter
+# Generated: 2026-03-13T03:35:48.977Z
+# Version: 2.0
+
+---
+id: content-ops-starter-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 200 commits
+
+---
+id: content-ops-starter-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: content-ops-starter-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: content-ops-starter-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: components, css, pages, utils
+
+---
+id: content-ops-starter-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: content-ops-starter-workflow-dependency-update-renovate
+trigger: "when doing dependency update renovate"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Workflow Dependency Update Renovate
+
+## Action
+
+Follow the dependency-update-renovate workflow:
+1. Renovate detects outdated dependency
+2. Creates PR with version bump
+3. Updates package-lock.json
+4. Sometimes updates package.json for major dependencies
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: package-lock.json, package.json
+
+---
+id: content-ops-starter-workflow-security-update-workflow
+trigger: "when doing security update workflow"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Workflow Security Update Workflow
+
+## Action
+
+Follow the security-update-workflow workflow:
+1. Security scanner identifies vulnerability
+2. Renovate creates priority PR with [SECURITY] tag
+3. Updates both package.json and package-lock.json
+4. Immediate deployment recommended
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: package-lock.json, package.json
+
+---
+id: content-ops-starter-workflow-lock-only-dependency-update
+trigger: "when doing lock only dependency update"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Workflow Lock Only Dependency Update
+
+## Action
+
+Follow the lock-only-dependency-update workflow:
+1. Renovate detects compatible version update
+2. Updates only package-lock.json
+3. No breaking changes expected
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~25x per month
+- Files: package-lock.json
+
+---
+id: content-ops-starter-workflow-next-js-framework-update
+trigger: "when doing next js framework update"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Workflow Next Js Framework Update
+
+## Action
+
+Follow the next-js-framework-update workflow:
+1. Next.js version bump detected
+2. Updates package.json with new version
+3. Updates package-lock.json with dependencies
+4. May include security patches
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: package.json, package-lock.json
+
+---
+id: content-ops-starter-workflow-react-ecosystem-update
+trigger: "when doing react ecosystem update"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Workflow React Ecosystem Update
+
+## Action
+
+Follow the react-ecosystem-update workflow:
+1. React monorepo release detected
+2. Updates React core packages
+3. Updates corresponding TypeScript definitions
+4. Ensures version compatibility across ecosystem
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: package-lock.json
+
+---
+id: content-ops-starter-file-naming-kebab
+trigger: "When creating new files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter File Naming Kebab
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Consistent kebab-case in src folder structure
+- Config files like tailwind.config.js, next.config.js
+
+---
+id: content-ops-starter-function-naming-camel
+trigger: "When defining functions"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Function Naming Camel
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- TypeScript codebase patterns
+- Standard React/Next.js conventions
+
+---
+id: content-ops-starter-class-naming-pascal
+trigger: "When defining classes or components"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Class Naming Pascal
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- React component architecture
+- TypeScript class conventions
+
+---
+id: content-ops-starter-constants-screaming-snake
+trigger: "When defining constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Constants Screaming Snake
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention
+
+## Evidence
+
+- TypeScript constant patterns
+- Configuration file structures
+
+---
+id: content-ops-starter-mixed-imports
+trigger: "When importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Mixed Imports
+
+## Action
+
+Use mixed import style (default and named imports as needed)
+
+## Evidence
+
+- React/Next.js import patterns
+- TypeScript module system
+
+---
+id: content-ops-starter-named-exports
+trigger: "When exporting from modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Named Exports
+
+## Action
+
+Prefer named exports over default exports
+
+## Evidence
+
+- TypeScript export patterns
+- Modular component architecture
+
+---
+id: content-ops-starter-separate-test-location
+trigger: "When creating test files"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Separate Test Location
+
+## Action
+
+Place tests in separate directory structure from source files
+
+## Evidence
+
+- Architecture shows testLocation: separate
+- Single-package structure with distinct test organization
+
+---
+id: content-ops-starter-commit-dependency-format
+trigger: "When committing dependency updates"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Commit Dependency Format
+
+## Action
+
+Use format 'Update dependency {name} to {version} (#{pr})'
+
+## Evidence
+
+- Update dependency algoliasearch to v4.27.0 (#293)
+- Update dependency autoprefixer to v10.4.27 (#292)
+- Update dependency next to v15.5.12 (#284)
+
+---
+id: content-ops-starter-commit-monorepo-format
+trigger: "When committing monorepo updates"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Commit Monorepo Format
+
+## Action
+
+Use format 'Update {package} monorepo to {version} (#{pr})'
+
+## Evidence
+
+- Update algoliasearch-autocomplete monorepo to v1.19.6 (#290)
+- Update react monorepo to v19.2.14 (#285)
+
+---
+id: content-ops-starter-commit-security-tag
+trigger: "When committing security updates"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Commit Security Tag
+
+## Action
+
+Add [SECURITY] tag to commit message
+
+## Evidence
+
+- Update dependency next to v15.5.10 [SECURITY] (#281)
+
+---
+id: content-ops-starter-renovate-workflow
+trigger: "When Renovate bot detects available package updates"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Renovate Workflow
+
+## Action
+
+Create PR with version bump and update package-lock.json
+
+## Evidence
+
+- 20+ dependency update commits
+- Consistent Renovate PR pattern
+- Automated package.json and package-lock.json updates
+
+---
+id: content-ops-starter-security-workflow
+trigger: "When security vulnerabilities are detected in dependencies"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Security Workflow
+
+## Action
+
+Create priority PR with [SECURITY] tag and immediate deployment
+
+## Evidence
+
+- Update dependency next to v15.5.10 [SECURITY] (#281)
+- Security update workflow pattern
+
+---
+id: content-ops-starter-lock-only-workflow
+trigger: "When minor/patch versions of dependencies are available"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Lock Only Workflow
+
+## Action
+
+Update only package-lock.json without package.json changes
+
+## Evidence
+
+- 25+ lock-only updates per month
+- Pattern of lock file updates without package.json changes
+
+---
+id: content-ops-starter-nextjs-workflow
+trigger: "When new Next.js versions are released"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Nextjs Workflow
+
+## Action
+
+Update both package.json and package-lock.json with framework dependencies
+
+## Evidence
+
+- Update dependency next to v15.5.12 (#284)
+- Update dependency next to v15.5.10 [SECURITY] (#281)
+- Next.js-specific update pattern
+
+---
+id: content-ops-starter-react-ecosystem-workflow
+trigger: "When React ecosystem packages have coordinated releases"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter React Ecosystem Workflow
+
+## Action
+
+Update React core packages and TypeScript definitions together
+
+## Evidence
+
+- Update react monorepo to v19.2.14 (#285)
+- React monorepo update pattern
+
+---
+id: content-ops-starter-type-based-organization
+trigger: "When organizing project structure"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Type Based Organization
+
+## Action
+
+Use type-based module organization with components, css, pages, utils folders
+
+## Evidence
+
+- moduleOrganization: type-based
+- srcLayout: [components, css, pages, utils]
+
+---
+id: content-ops-starter-single-package-structure
+trigger: "When setting up project architecture"
+confidence: 0.85
+domain: architecture
+source: repo-analysis
+source_repo: jemorrissey92-code/content-ops-starter
+---
+
+# Content Ops Starter Single Package Structure
+
+## Action
+
+Use single-package structure with src directory
+
+## Evidence
+
+- folderStructure.type: single-package
+- entryPoints: [src/pages/_app.js]
+
